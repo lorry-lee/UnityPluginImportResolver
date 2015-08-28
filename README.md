@@ -11,4 +11,5 @@ It will:
 
 
 Usage : Put the file ImportResolver.py in the Plugins folder and click to run it.
+
 Requirements : Python environment.
