@@ -141,6 +141,8 @@ def try_replace_old_files(root, subdir, file_without_ext, file_without_num):
             if os.path.exists(os.path.join(root, old_file)):
                 if query_yes_no(subdir + '/' + f + '  ------>  ' + old_file + '  ? [y/n]:'):
                     replace_old_file(root, subdir, f, old_file, False)
+                elif (file_index - 1 > 1) and query_yes_no('Skip next ' + str(file_index - 1) + ' similiar files with prefix ' + file_without_num + ' ? [y/n]:'):
+                    break
             --file_index
 
 if __name__ == '__main__':
