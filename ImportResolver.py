@@ -143,7 +143,7 @@ def try_replace_old_files(root, subdir, file_without_ext, file_without_num):
                     replace_old_file(root, subdir, f, old_file, False)
                 elif (file_index - 1 > 1) and query_yes_no('Skip next ' + str(file_index - 1) + ' similiar files with prefix ' + file_without_num + ' ? [y/n]:'):
                     break
-            --file_index
+            file_index = file_index - 1
 
 if __name__ == '__main__':
     init_logger(log_level=logging.DEBUG, log_to_console=False, log_to_file=True, log_file='./ImportResolverLog.txt')
